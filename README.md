@@ -29,7 +29,7 @@ A full user interface overhaul for Call of Duty 1 (2003) with redesigned menus, 
 
 ## How to Install
 
-1. Download `zzz_bo7medx_ui_v2.pk3` from the `main` folder.
+1. Download `zzz_bo7medx_ui_v2.pk3` from the `mod` folder.
 2. Go to your Call of Duty 1 installation folder.
 3. Open the `main` directory.
 4. Drop the `.pk3` file inside it.
