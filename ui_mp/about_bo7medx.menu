@@ -1,0 +1,262 @@
+// Made By BO7MEDX
+
+#include "ui/menudef.h"
+
+{
+    menuDef
+    {
+        name       "about_bo7medx"
+        fullscreen 0
+        rect       170 95 300 270
+        focusColor UI_FOCUS_COLOR
+        style      1
+        border     0
+        popup
+        onESC { close about_bo7medx; open main; }
+
+        // Full screen dim
+        itemDef
+        {
+            name       about_fade
+            style      WINDOW_STYLE_SHADER
+            rect       -170 -95 640 480
+            background "ui/assets/fadebox.tga"
+            forecolor  0 0 0 0.6
+            visible    1
+            decoration
+        }
+
+        // Panel background - matches main menu right_panel_bg
+        itemDef
+        {
+            name       about_bg
+            rect       0 0 300 270
+            style      WINDOW_STYLE_SHADER
+            background "ui_mp/assets/hud@window_background.tga"
+            forecolor  0.05 0.02 0.1 0.7
+            visible    1
+            decoration
+        }
+
+        // Cyan top border
+        itemDef
+        {
+            name      about_top_line
+            rect      0 0 300 1
+            style     WINDOW_STYLE_FILLED
+            backcolor 0 1 1 0.55
+            visible   1
+            decoration
+        }
+
+        // Cyan accent bar
+        itemDef
+        {
+            name      about_accent
+            rect      0 0 300 5
+            style     WINDOW_STYLE_SHADER
+            background "ui/assets/gradientbar2.tga"
+            forecolor  0 1 1 0.65
+            visible    1
+            decoration
+        }
+
+        // Cyan bottom border
+        itemDef
+        {
+            name      about_bot_line
+            rect      0 269 300 1
+            style     WINDOW_STYLE_FILLED
+            backcolor 0 1 1 0.55
+            visible   1
+            decoration
+        }
+
+        // Title
+        itemDef
+        {
+            name       about_title
+            text       "BO7MEDX Mod"
+            rect       0 14 300 18
+            textalign  ITEM_ALIGN_CENTER
+            textalignx 150
+            textaligny 14
+            textscale  .30
+            textfont   UI_FONT_BOLD
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  1 1 1 1
+            visible    1
+            decoration
+        }
+
+        // Mod by: ^2BO7MEDX
+        itemDef
+        {
+            name       about_modby
+            text       "Mod by  :  ^2BO7MEDX"
+            rect       20 38 260 13
+            textaligny 11
+            textscale  .24
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  1 1 1 1
+            visible    1
+            decoration
+        }
+
+        // Website
+        itemDef
+        {
+            name       about_web
+            text       "Website :  ^2v3nom.rf.gd"
+            rect       20 56 260 13
+            textaligny 11
+            textscale  .24
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  1 1 1 1
+            visible    1
+            decoration
+        }
+
+        // Discord
+        itemDef
+        {
+            name       about_disc
+            text       "Discord :  ^1@BO7MEDX"
+            rect       20 74 260 13
+            textaligny 11
+            textscale  .24
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  1 1 1 1
+            visible    1
+            decoration
+        }
+
+        // Server
+        itemDef
+        {
+            name       about_srv
+            text       "Server  :  ^1discord.gg/f4k4d6HjDZ"
+            rect       20 92 260 13
+            textaligny 11
+            textscale  .24
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  1 1 1 1
+            visible    1
+            decoration
+        }
+
+        // Version
+        itemDef
+        {
+            name       about_ver
+            text       "Version :  3.0"
+            rect       20 110 260 13
+            textaligny 11
+            textscale  .24
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  1 1 1 1
+            visible    1
+            decoration
+        }
+
+        // Credits header
+        itemDef
+        {
+            name       about_credits_hdr
+            text       "Credits"
+            rect       0 130 300 13
+            textalign  ITEM_ALIGN_CENTER
+            textalignx 150
+            textaligny 11
+            textscale  .24
+            textfont   UI_FONT_BOLD
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  1 1 1 1
+            visible    1
+            decoration
+        }
+
+        // Credits lines
+        itemDef
+        {
+            name       about_cr1
+            text       "BO7MEDX - Server & Mod Development"
+            rect       18 147 264 12
+            textaligny 10
+            textscale  .21
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  0.85 0.85 0.85 1
+            visible    1
+            decoration
+        }
+        itemDef
+        {
+            name       about_cr2
+            text       "Abdo Dell - Co-Owner, Testing"
+            rect       18 161 264 12
+            textaligny 10
+            textscale  .21
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  0.85 0.85 0.85 1
+            visible    1
+            decoration
+        }
+
+        // Footer
+        itemDef
+        {
+            name       about_footer
+            text       "Visit v3nom.rf.gd for more informations."
+            rect       0 210 300 12
+            textalign  ITEM_ALIGN_CENTER
+            textalignx 150
+            textaligny 10
+            textscale  .21
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  0.75 0.75 0.75 1
+            visible    1
+            decoration
+        }
+
+        // Close button
+        itemDef
+        {
+            name       about_close_btn
+            text       "Close"
+            type       ITEM_TYPE_BUTTON
+            style      WINDOW_STYLE_EMPTY
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            rect       0 232 300 20
+            textalign  ITEM_ALIGN_CENTER
+            textscale  .30
+            textalignx 150
+            textaligny 15
+            textfont   UI_FONT_BOLD
+            forecolor  1 1 1 1
+            visible    1
+            mouseEnter
+            {
+                play "mouse_over";
+                setitemcolor about_close_btn forecolor 1 0.9 0.1 1;
+            }
+            mouseExit
+            {
+                setitemcolor about_close_btn forecolor 1 1 1 1;
+            }
+            action
+            {
+                play "mouse_click";
+                close about_bo7medx;
+                open main;
+            }
+        }
+    }
+}

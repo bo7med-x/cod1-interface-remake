@@ -1,0 +1,7 @@
+name,sequence,file,vol_min,vol_max,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle
+
+null,,null.wav,,,,,,,,,,,,,
+
+#Menu,,,,,,,,,,,,,,,
+music_bo7medx,,bo7medx_menu/1_menu.mp3,1,,,,,,music,streamed,,looping,,menu,
+

@@ -1,0 +1,316 @@
+// Made By BO7MEDX
+// Servers popup - connect to V3NOM servers
+
+#include "ui/menudef.h"
+
+{
+    menuDef
+    {
+        name       "servers_bo7medx"
+        fullscreen 0
+        rect       170 120 300 210
+        focusColor UI_FOCUS_COLOR
+        style      1
+        border     0
+        popup
+        onESC { close servers_bo7medx; open main; }
+
+        // Dim
+        itemDef
+        {
+            name       servers_fade
+            style      WINDOW_STYLE_SHADER
+            rect       -170 -120 640 480
+            background "ui/assets/fadebox.tga"
+            forecolor  0 0 0 0.5
+            visible    1
+            decoration
+        }
+
+        // Panel - matches main menu style
+        itemDef
+        {
+            name       servers_bg
+            rect       0 0 300 210
+            style      WINDOW_STYLE_SHADER
+            background "ui_mp/assets/hud@window_background.tga"
+            forecolor  0.05 0.02 0.1 0.7
+            visible    1
+            decoration
+        }
+
+        // Cyan top accent
+        itemDef
+        {
+            name      servers_accent
+            rect      0 0 300 5
+            style     WINDOW_STYLE_SHADER
+            background "ui/assets/gradientbar2.tga"
+            forecolor  0 1 1 0.65
+            visible    1
+            decoration
+        }
+        itemDef
+        {
+            name      servers_top_line
+            rect      0 0 300 1
+            style     WINDOW_STYLE_FILLED
+            backcolor 0 1 1 0.55
+            visible   1
+            decoration
+        }
+        itemDef
+        {
+            name      servers_bot_line
+            rect      0 209 300 1
+            style     WINDOW_STYLE_FILLED
+            backcolor 0 1 1 0.55
+            visible   1
+            decoration
+        }
+
+        // Title
+        itemDef
+        {
+            name       servers_title
+            text       "V3NOM SERVERS"
+            rect       0 6 300 20
+            textalign  ITEM_ALIGN_CENTER
+            textalignx 150
+            textaligny 16
+            textscale  .30
+            textfont   UI_FONT_BOLD
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  0 1 1 1
+            visible    1
+            decoration
+        }
+
+        // Divider
+        itemDef
+        {
+            name      servers_div
+            rect      14 30 272 1
+            style     WINDOW_STYLE_FILLED
+            backcolor 0 1 1 0.35
+            visible   1
+            decoration
+        }
+
+        // --- Server 1: DM ---
+        itemDef
+        {
+            name       srv1_label
+            text       "^2V3NOM | Dm"
+            rect       18 38 180 12
+            textaligny 10
+            textscale  .22
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  0.2 1 0.3 1
+            visible    1
+            decoration
+        }
+        itemDef
+        {
+            name       srv1_ip
+            text       "5.39.63.207:5351"
+            rect       18 52 180 12
+            textaligny 10
+            textscale  .19
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  0.7 0.7 0.7 1
+            visible    1
+            decoration
+        }
+        itemDef
+        {
+            name       srv1_connect
+            text       "Connect"
+            type       ITEM_TYPE_BUTTON
+            style      WINDOW_STYLE_EMPTY
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            rect       215 38 74 26
+            textalign  ITEM_ALIGN_CENTER
+            textscale  .24
+            textalignx 37
+            textaligny 17
+            textfont   UI_FONT_BOLD
+            forecolor  0.2 1 0.3 1
+            visible    1
+            mouseEnter { play "mouse_over"; setitemcolor srv1_connect forecolor 1 1 0.1 1; }
+            mouseExit  { setitemcolor srv1_connect forecolor 0.2 1 0.3 1; }
+            action
+            {
+                play "mouse_click";
+                close servers_bo7medx; close main;
+                close mods_menu; close options_multi;
+                exec "connect 5.39.63.207:5351";
+            }
+        }
+
+        itemDef
+        {
+            name      srv_div_a
+            rect      14 68 272 1
+            style     WINDOW_STYLE_FILLED
+            backcolor 0 1 1 0.15
+            visible   1
+            decoration
+        }
+
+        // --- Server 2: TDM ---
+        itemDef
+        {
+            name       srv2_label
+            text       "^7V3NOM | TDM"
+            rect       18 74 180 12
+            textaligny 10
+            textscale  .22
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  0.3 0.8 1 1
+            visible    1
+            decoration
+        }
+        itemDef
+        {
+            name       srv2_ip
+            text       "5.39.63.207:3122"
+            rect       18 88 180 12
+            textaligny 10
+            textscale  .19
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  0.7 0.7 0.7 1
+            visible    1
+            decoration
+        }
+        itemDef
+        {
+            name       srv2_connect
+            text       "^7Connect"
+            type       ITEM_TYPE_BUTTON
+            style      WINDOW_STYLE_EMPTY
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            rect       215 74 74 26
+            textalign  ITEM_ALIGN_CENTER
+            textscale  .24
+            textalignx 37
+            textaligny 17
+            textfont   UI_FONT_BOLD
+            forecolor  0.3 0.8 1 1
+            visible    1
+            mouseEnter { play "mouse_over"; setitemcolor srv2_connect forecolor 1 1 0.1 1; }
+            mouseExit  { setitemcolor srv2_connect forecolor 0.3 0.8 1 1; }
+            action
+            {
+                play "mouse_click";
+                close servers_bo7medx; close main;
+                close mods_menu; close options_multi;
+                exec "connect 5.39.63.207:3122";
+            }
+        }
+
+        itemDef
+        {
+            name      srv_div_b
+            rect      14 104 272 1
+            style     WINDOW_STYLE_FILLED
+            backcolor 0 1 1 0.15
+            visible   1
+            decoration
+        }
+
+        // --- Server 3: S&D ---
+        itemDef
+        {
+            name       srv3_label
+            text       "^4V3NOM | S&D"
+            rect       18 110 180 12
+            textaligny 10
+            textscale  .22
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  1 0.9 0.2 1
+            visible    1
+            decoration
+        }
+        itemDef
+        {
+            name       srv3_ip
+            text       "5.39.63.207:3708"
+            rect       18 124 180 12
+            textaligny 10
+            textscale  .19
+            textfont   UI_FONT_NORMAL
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            forecolor  0.7 0.7 0.7 1
+            visible    1
+            decoration
+        }
+        itemDef
+        {
+            name       srv3_connect
+            text       "^4Connect"
+            type       ITEM_TYPE_BUTTON
+            style      WINDOW_STYLE_EMPTY
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            rect       215 110 74 26
+            textalign  ITEM_ALIGN_CENTER
+            textscale  .24
+            textalignx 37
+            textaligny 17
+            textfont   UI_FONT_BOLD
+            forecolor  1 0.9 0.2 1
+            visible    1
+            mouseEnter { play "mouse_over"; setitemcolor srv3_connect forecolor 1 1 0.1 1; }
+            mouseExit  { setitemcolor srv3_connect forecolor 1 0.9 0.2 1; }
+            action
+            {
+                play "mouse_click";
+                close servers_bo7medx; close main;
+                close mods_menu; close options_multi;
+                exec "connect 5.39.63.207:3708";
+            }
+        }
+
+        // Divider above close
+        itemDef
+        {
+            name      servers_div2
+            rect      14 142 272 1
+            style     WINDOW_STYLE_FILLED
+            backcolor 0 1 1 0.35
+            visible   1
+            decoration
+        }
+
+        // Close button
+        itemDef
+        {
+            name       srv_close_btn
+            text       "Close"
+            type       ITEM_TYPE_BUTTON
+            style      WINDOW_STYLE_EMPTY
+            textstyle  ITEM_TEXTSTYLE_SHADOWEDMORE
+            rect       0 152 300 22
+            textalign  ITEM_ALIGN_CENTER
+            textscale  .28
+            textalignx 150
+            textaligny 15
+            textfont   UI_FONT_BOLD
+            forecolor  0 1 1 1
+            visible    1
+            mouseEnter { play "mouse_over"; setitemcolor srv_close_btn forecolor 1 1 0.1 1; }
+            mouseExit  { setitemcolor srv_close_btn forecolor 0 1 1 1; }
+            action
+            {
+                play "mouse_click";
+                close servers_bo7medx;
+                open main;
+            }
+        }
+    }
+}
