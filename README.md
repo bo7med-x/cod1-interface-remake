@@ -37,9 +37,20 @@ A full user interface overhaul for Call of Duty 1 (2003) with redesigned menus, 
 
 ---
 
+## Contributing
+
+Contributions are welcome! If you want to improve the UI, fix bugs, or add new features, feel free to fork this repository and submit a pull request.
+
+---
+
 ## Credits
 
 * **Remake Creator:** BO7MEDX
 * **Discord:** @BO7MEDX
 * **Discord Server:** https://discord.gg/VwZhDcbehx
-* **Note:** Provided for free personal use only. Do not re-upload, modify, or distribute without permission.
+
+---
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE). Anyone is free to use, modify, and distribute the code and assets, provided that proper credit is given to the original creator.
